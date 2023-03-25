@@ -14,7 +14,7 @@ const editNoteByIdHandler = (req, h) => {
   const { title, tags, body } = req.payload;
   const updatedAt = new Date().toISOString;
 
-  const idxRetrieved = notes.findIndex((n) => n.id === id)[0];
+  const idxRetrieved = notes.findIndex((n) => n.id === id);
 
   if (idxRetrieved !== -1) {
     notes[idxRetrieved] = {
