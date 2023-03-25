@@ -87,7 +87,7 @@ const deleteNoteById = (req, h) => {
   const res = h.response({
     status: 'error',
     message: 'Catatan gagal ditambahkan',
-  }).header();
+  });
   res.code(500);
   return res;
 };
